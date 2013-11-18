@@ -3,7 +3,7 @@
 The show itself is a series of osc actions that will be run in a loop until then end time.
 
 'Usage'
-
+```javascript
 var ShowScheduler = require("./lib/showScheduler");
 
 //Load Show File
@@ -33,10 +33,10 @@ currentTime.setHours(19, 59, 55, 0)
 
 //This line schedules the show to start
 thisSchedule.activate(currentTime);
-
+```
 `Format for Show File' - Comments are Not Allowed in Real JSON File
 show.json
-
+```json
 {
 	"servers" : { //One or more Servers
 		"Server1" : {
@@ -67,3 +67,4 @@ show.json
 	]}
 
 }
+```
