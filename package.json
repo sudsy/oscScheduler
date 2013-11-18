@@ -1,0 +1,32 @@
+{
+  "name": "oscScheduler",
+  "version": "0.0.1",
+  "description": "Sends osc actions on a schedule. Used to create a daily repeating show (eg. Christmas Lights Display)",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "node-osc": "~0.2.1"
+  },
+  "devDependencies": {
+    "should" : "*"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sudsy/oscScheduler"
+  },
+  "keywords": [
+    "osc",
+    "scheduler",
+    "christmas"
+  ],
+  "author": "Ben Sudbury",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/sudsy/oscScheduler/issues"
+  }
+}
