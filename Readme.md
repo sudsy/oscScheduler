@@ -1,4 +1,4 @@
-`oscScheduler` works by reading a schedule file written in json. This file specifies a start time and end time for the show which will be run each day. 
+`oscscheduler` works by reading a schedule file written in json. This file specifies a start time and end time for the show which will be run each day. 
 
 The show itself is a series of osc actions that will be run in a loop until then end time.
 
