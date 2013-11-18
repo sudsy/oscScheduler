@@ -51,19 +51,19 @@ show.json
 		{"start": 10, "commands": [ //start is the number of seconds from the beginning of the loop
 			{"server": "Server1", "action": "/CURRENT_VISUAL", "parameter": 0},
 			{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameter": 4},
-			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
+			{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
 		]},
 		{"start": 20, "commands": [
-			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 1},
-			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 2},
-			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 1}
+			{"server": "Server1", "action": "/CURRENT_VISUAL", "parameter": 1},
+			{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameter": 2},
+			{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 1}
 		]}
 	],
 	"onShowEnd" : {"commands":[ //This runs at the end Time to clean up the show
-		{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 0},
-		{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 0},
-		{"server": "PixelController", "action": "/CURRENT_COLORSET", "parameter": 1},
-		{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
+		{"server": "Server1", "action": "/CURRENT_VISUAL", "parameter": 0},
+		{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameter": 0},
+		{"server": "Server1", "action": "/CURRENT_COLORSET", "parameter": 1},
+		{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
 	]}
 
 }
