@@ -1,4 +1,4 @@
-var ShowScheduler = require("../index"); //Replace this with var ShowScheduler = require("oscScheduler");
+var ShowScheduler = require("../index"); //Replace this with var ShowScheduler = require("oscscheduler");
 
 //Load Show File
 var show = require("./show.json");

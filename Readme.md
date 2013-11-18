@@ -4,7 +4,7 @@ The show itself is a series of osc actions that will be run in a loop until then
 
 'Usage'
 ```javascript
-var ShowScheduler = require("./lib/showScheduler");
+var ShowScheduler = require("oscscheduler");
 
 //Load Show File
 var show = require("./show.json");  // The Show File to Load - More details below
