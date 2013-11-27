@@ -1,20 +1,20 @@
 {
 	"servers" : {
 		"PixelController" : {
-			"Host" : "127.0.0.1",
-			"Port" : 9876
+			"Host" : "10.1.1.10",
+			"Port" : 9875
 		}
 	},
 	"startTime": "20:00",
 	"endTime": "20:01",
 	"length" : 30,  
 	"schedule" : [
-		{"start": 10, "commands": [
+		{"start": 0, "commands": [
 			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 0},
 			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 4},
 			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
 		]},
-		{"start": 20, "commands": [
+		{"start": 10, "commands": [
 			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 1},
 			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 2},
 			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 1}

@@ -12,7 +12,8 @@ var pixelController;
 
 thisSchedule.on("beforeStart", function(){
  	//If there are things that need be done before the show starts
-	
+	//Start up PixelController
+	//Start up the two processing sketches
 	
 })
 
@@ -21,7 +22,7 @@ thisSchedule.on("beforeStart", function(){
 thisSchedule.on("afterEnd", function(){
 	
 	//If there are things that need tidying up after the show is done, do them here
-	
+	//Shut down the pixel controller and the sketches
 
 })
 
