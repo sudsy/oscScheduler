@@ -1,30 +1,29 @@
 {
 	"servers" : {
 		"PixelController" : {
-			"Host" : "10.1.1.10",
+			"Host" : "127.0.0.1",
 			"Port" : 9875
 		}
 	},
 	"startTime": "20:00",
-	"endTime": "20:01",
-	"length" : 30,  
+	"endTime": "20:01", 
 	"schedule" : [
-		{"start": 0, "commands": [
-			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 0},
-			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 4},
-			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
+		{"duration": 10, "commands": [
+			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameters": [{"i":0}]},
+			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameters": [{"i":4}]},
+			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameters": [{"i":0}]}
 		]},
-		{"start": 10, "commands": [
-			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 1},
-			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 2},
-			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 1}
+		{"duration": 10, "commands": [
+			{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameters": [{"i":1}]},
+			{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameters": [{"i":2}]},
+			{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameters": [{"i":1}]}
 		]}
 	],
 	"onShowEnd" : {"commands":[
-		{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameter": 0},
-		{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameter": 0},
-		{"server": "PixelController", "action": "/CURRENT_COLORSET", "parameter": 1},
-		{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
+		{"server": "PixelController", "action": "/CURRENT_VISUAL", "parameters": [{"i":0}]},
+		{"server": "PixelController", "action": "/CHANGE_GENERATOR_A", "parameters": [{"i":0}]},
+		{"server": "PixelController", "action": "/CURRENT_COLORSET", "parameters": [{"i":1}]},
+		{"server": "PixelController", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameters": [{"i":0}]}
 	]}
 
 }

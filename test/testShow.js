@@ -12,18 +12,17 @@ var testShow = {
 		}
 	},
 	"startTime": "20:00",
-	"endTime": "20:01",
-	"length" : 3,  
+	"endTime": "20:01", 
 	"schedule" : [
-		{"start": 1, "commands": [
-			{"server": "testServer", "action": "/CURRENT_VISUAL", "parameter": 0}
+		{"duration": 1, "commands": [
+			{"server": "testServer", "action": "/CURRENT_VISUAL", "parameters": [{i:0}]}
 		]},
-		{"start": 2, "commands": [
-			{"server": "testServer", "action": "/CURRENT_VISUAL", "parameter": 1}
+		{"duration": 2, "commands": [
+			{"server": "testServer", "action": "/CURRENT_VISUAL", "parameters": [{i:1}]}
 		]}
 	],
 	"onShowEnd" : {"commands":[
-		{"server": "testServer", "action": "/CURRENT_VISUAL", "parameter": 0}
+		{"server": "testServer", "action": "/CURRENT_VISUAL", "parameter": [{i:0}]}
 	]}
 
 }
@@ -84,8 +83,8 @@ describe("Basic Show", function(){
 		//One for the start 
 		timeoutLogger.timeoutArray.should.have.length(4);
 		timeoutLogger.intervalArray.should.have.length(0);
-		timeoutLogger.timeoutArray[0].delay.should.equal(1000); //These are not adjusted for the late start, we always start at the beginning
-		timeoutLogger.timeoutArray[1].delay.should.equal(2000);
+		timeoutLogger.timeoutArray[0].delay.should.equal(0000); //These are not adjusted for the late start, we always start at the beginning
+		timeoutLogger.timeoutArray[1].delay.should.equal(1000);
 		timeoutLogger.timeoutArray[2].delay.should.equal(86399000); // 1 second less than a day
 		timeoutLogger.timeoutArray[3].delay.should.equal(59000);
 		setInterval = originalSetInterval;

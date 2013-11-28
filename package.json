@@ -1,6 +1,6 @@
 {
   "name": "oscscheduler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sends osc actions on a schedule. Used to create a daily repeating show (eg. Christmas Lights Display)",
   "main": "index.js",
   "directories": {

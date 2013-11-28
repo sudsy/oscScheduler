@@ -46,24 +46,23 @@ show.json
 	},
 	"startTime": "20:00", //Time to start the show
 	"endTime": "20:01", //Time to end the show
-	"length" : 30,  //Length of the show before it loops
-	"schedule" : [ // The groups of commands to run 
-		{"start": 10, "commands": [ //start is the number of seconds from the beginning of the loop
-			{"server": "Server1", "action": "/CURRENT_VISUAL", "parameter": 0},
-			{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameter": 4},
-			{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
+	"schedule" : [ // The groups of commands to run when they have finished they will just loop
+		{"duration": 10, "commands": [ //duration is how long you want the effect to last till the next one
+			{"server": "Server1", "action": "/CURRENT_VISUAL", "parameters": [{"i":0}] }, //Parameters is an array of typed parameters example [{"i":1}, {"s":"some string"}]
+			{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameters": [{"i":4}]},
+			{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameters": [{"i":0}]}
 		]},
-		{"start": 20, "commands": [
-			{"server": "Server1", "action": "/CURRENT_VISUAL", "parameter": 1},
-			{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameter": 2},
-			{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 1}
+		{"duration": 20, "commands": [
+			{"server": "Server1", "action": "/CURRENT_VISUAL", "parameters": [{"i":1}]},
+			{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameters": [{"i":2}]},
+			{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameters": [{"i":1}]}
 		]}
 	],
 	"onShowEnd" : {"commands":[ //This runs at the end Time to clean up the show
-		{"server": "Server1", "action": "/CURRENT_VISUAL", "parameter": 0},
-		{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameter": 0},
-		{"server": "Server1", "action": "/CURRENT_COLORSET", "parameter": 1},
-		{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameter": 0}
+		{"server": "Server1", "action": "/CURRENT_VISUAL", "parameters": [{"i":0}]},
+		{"server": "Server1", "action": "/CHANGE_GENERATOR_A", "parameters": [{"i":0}]},
+		{"server": "Server1", "action": "/CURRENT_COLORSET", "parameters": [{"i":1}]},
+		{"server": "Server1", "action": "/CHANGE_ALL_OUTPUT_VISUAL", "parameters": [{"i":0}]}
 	]}
 
 }
